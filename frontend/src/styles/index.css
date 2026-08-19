@@ -1234,3 +1234,401 @@ h1 {
     max-width: calc(100% - 4.5rem);
   }
 }
+
+/* Impact analysis */
+.impact-page {
+  gap: 1.5rem;
+}
+
+.impact-controls-card {
+  display: flex;
+  align-items: end;
+  padding: 1.25rem;
+  gap: 1rem;
+}
+
+.impact-service-field {
+  display: grid;
+  flex: 1;
+  max-width: 36rem;
+  gap: 0.45rem;
+}
+
+.impact-service-field label {
+  color: #344054;
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.impact-service-field select {
+  min-height: 2.75rem;
+}
+
+.impact-analyze-button {
+  min-width: 10rem;
+}
+
+button:disabled,
+button:disabled:hover {
+  border-color: #d0d5dd;
+  background: #e4e7ec;
+  color: #98a2b3;
+  cursor: not-allowed;
+}
+
+.inline-error {
+  display: flex;
+  align-items: center;
+  min-height: 2.75rem;
+  gap: 1rem;
+  color: #b42318;
+}
+
+.impact-intro-state,
+.impact-no-results {
+  display: grid;
+  min-height: 20rem;
+  padding: 3rem 1.5rem;
+  place-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+.impact-intro-mark {
+  display: grid;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-bottom: 1rem;
+  place-items: center;
+  border-radius: 1rem;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.impact-intro-state h2,
+.impact-no-results h2 {
+  margin: 0;
+  color: #101828;
+}
+
+.impact-intro-state p,
+.impact-no-results p {
+  max-width: 38rem;
+  margin: 0.65rem 0 0;
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+.impact-results {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.impact-result-heading,
+.impact-section-heading {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.impact-result-heading h2,
+.impact-section-heading h2 {
+  margin: 0;
+  color: #101828;
+}
+
+.impact-result-heading h2 {
+  font-size: 1.65rem;
+}
+
+.impact-section-heading h2 {
+  font-size: 1.08rem;
+}
+
+.impact-section-heading p {
+  margin: 0.35rem 0 0;
+  color: var(--color-muted);
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+.impact-section-heading > span {
+  flex: none;
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.impact-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.impact-metric {
+  display: grid;
+  min-height: 7.5rem;
+  padding: 1.25rem;
+  align-content: center;
+  gap: 0.55rem;
+}
+
+.impact-metric > span:not(.skeleton) {
+  color: var(--color-muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.impact-metric strong {
+  color: #101828;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.impact-content-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(18rem, 0.75fr);
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.impact-graph-card,
+.affected-list-card,
+.propagation-paths-card,
+.impact-graph-skeleton,
+.impact-list-skeleton {
+  padding: 1.25rem;
+}
+
+.impact-graph-card {
+  min-width: 0;
+}
+
+.impact-flow {
+  width: 100%;
+  height: 38rem;
+  margin-top: 1rem;
+  overflow: hidden;
+  border: 1px solid #e4e7ec;
+  border-radius: 0.65rem;
+  background: #f8fafc;
+}
+
+.impact-node {
+  width: 13.5rem;
+  min-height: 6.5rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.7rem;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgb(15 23 42 / 8%);
+}
+
+.impact-node-root {
+  border: 2px solid #b42318;
+  background: #fff7f6;
+  box-shadow: 0 5px 16px rgb(180 35 24 / 13%);
+}
+
+.impact-node-affected:has(.badge-critical),
+.impact-node-affected:has(.badge-high) {
+  border-color: #f2b96d;
+  background: #fffcf5;
+}
+
+.impact-node-label {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: #b54708;
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.impact-node-root .impact-node-label {
+  color: #b42318;
+}
+
+.impact-node strong {
+  display: block;
+  color: #101828;
+  font-size: 0.88rem;
+  line-height: 1.35;
+}
+
+.impact-node-badges {
+  display: flex;
+  margin-top: 0.65rem;
+}
+
+.affected-list-card {
+  max-height: 45.75rem;
+  overflow: auto;
+}
+
+.affected-depth-groups {
+  display: grid;
+  margin-top: 1.25rem;
+  gap: 1.25rem;
+}
+
+.affected-depth-group h3 {
+  margin: 0 0 0.55rem;
+  color: #475467;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.affected-depth-group ul,
+.propagation-path-list {
+  display: grid;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.affected-depth-group li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem;
+  gap: 0.7rem;
+  border: 1px solid #eaecf0;
+  border-radius: 0.5rem;
+  background: #fcfcfd;
+}
+
+.affected-depth-group li div {
+  display: grid;
+  min-width: 0;
+  gap: 0.15rem;
+}
+
+.affected-depth-group li strong {
+  overflow: hidden;
+  color: #344054;
+  font-size: 0.82rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.affected-depth-group li div > span {
+  color: var(--color-muted);
+  font-size: 0.72rem;
+}
+
+.propagation-path-list {
+  margin-top: 1rem;
+}
+
+.propagation-path-list li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0.75rem 0.85rem;
+  gap: 0.35rem;
+  border: 1px solid #eaecf0;
+  border-radius: 0.5rem;
+  background: #fcfcfd;
+  color: #344054;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.propagation-path-list span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.propagation-path-list i {
+  color: #d97706;
+  font-size: 1rem;
+  font-style: normal;
+}
+
+.additional-paths {
+  margin: 0.8rem 0 0;
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.impact-no-results > span {
+  display: grid;
+  width: 3.25rem;
+  height: 3.25rem;
+  margin-bottom: 1rem;
+  place-items: center;
+  border-radius: 999px;
+  background: #ecfdf3;
+  color: #16865b;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.impact-metric-skeleton {
+  justify-items: start;
+}
+
+.impact-graph-skeleton,
+.impact-list-skeleton {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+}
+
+.impact-skeleton-canvas {
+  width: 100%;
+  height: 34rem;
+}
+
+@media (max-width: 960px) {
+  .impact-content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .affected-list-card {
+    max-height: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .impact-controls-card {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .impact-service-field {
+    max-width: none;
+  }
+
+  .impact-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-metric {
+    min-height: 6rem;
+  }
+
+  .impact-flow {
+    height: 31rem;
+  }
+
+  .impact-result-heading {
+    align-items: start;
+  }
+
+  .inline-error {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
