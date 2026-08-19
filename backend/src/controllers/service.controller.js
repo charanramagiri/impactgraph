@@ -38,4 +38,26 @@ async function getService(req, res) {
   }
 }
 
-module.exports = { getServices, getService };
+async function getServiceImpact(req, res) {
+  try {
+    const impact = await serviceService.getServiceImpact(req.params.id);
+
+    if (!impact) {
+      res.status(404).json({ error: 'Service not found.' });
+      return;
+    }
+
+    res.status(200).json(impact);
+  } catch (error) {
+    const errorCode =
+      typeof error.code === 'string' ? ` (code: ${error.code})` : '';
+    console.error(`Service impact query failed${errorCode}.`);
+
+    res.status(503).json({
+      status: 'error',
+      message: 'Graph database is currently unavailable.',
+    });
+  }
+}
+
+module.exports = { getServices, getService, getServiceImpact };

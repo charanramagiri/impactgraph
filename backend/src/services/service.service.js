@@ -8,4 +8,8 @@ async function getService(serviceId) {
   return serviceRepository.getServiceById(serviceId);
 }
 
-module.exports = { listServices, getService };
+async function getServiceImpact(serviceId) {
+  return serviceRepository.getServiceImpact(serviceId);
+}
+
+module.exports = { listServices, getService, getServiceImpact };
