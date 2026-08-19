@@ -5,6 +5,7 @@ const dashboardRouter = require('./routes/dashboard');
 const servicesRouter = require('./routes/services');
 const graphRouter = require('./routes/graph');
 const criticalDependenciesRouter = require('./routes/criticalDependencies');
+const incidentsRouter = require('./routes/incidents');
 
 const app = express();
 
@@ -24,5 +25,6 @@ app.use('/api/dashboard', dashboardRouter);
 app.use('/api/services', servicesRouter);
 app.use('/api/graph', graphRouter);
 app.use('/api/critical-dependencies', criticalDependenciesRouter);
+app.use('/api/incidents', incidentsRouter);
 
 module.exports = app;
