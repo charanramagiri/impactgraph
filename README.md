@@ -321,12 +321,16 @@ Production secrets belong in the hosting platforms' environment settings and mus
 ## Screenshots
 
 <!-- Add Dashboard screenshot here -->
+image.png
 
 <!-- Add Architecture Explorer screenshot here -->
+image.png
 
 <!-- Add Impact Analysis screenshot here -->
+image.png
 
 <!-- Add Incidents screenshot here -->
+image.png
 
 ## Design Decisions
 
