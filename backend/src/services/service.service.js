@@ -4,4 +4,8 @@ async function listServices() {
   return serviceRepository.getServices();
 }
 
-module.exports = { listServices };
+async function getService(serviceId) {
+  return serviceRepository.getServiceById(serviceId);
+}
+
+module.exports = { listServices, getService };
