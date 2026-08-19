@@ -1,6 +1,7 @@
 function IncidentListSkeleton() {
   return (
-    <div className="incidents-layout" aria-label="Loading incidents">
+    <div className="incidents-layout" aria-label="Loading incidents" role="status">
+      <span className="visually-hidden">Loading incident history</span>
       <aside className="card incident-browser-list incident-list-skeleton">
         <span className="skeleton skeleton-title" />
         {Array.from({ length: 5 }, (_, index) => (

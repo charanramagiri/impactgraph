@@ -307,7 +307,6 @@ function ImpactAnalysis() {
                       nodesConnectable={false}
                       nodesDraggable={false}
                       elementsSelectable={false}
-                      proOptions={{ hideAttribution: true }}
                     >
                       <Background color="#e2e8f0" gap={24} size={1} />
                       <Controls showInteractive={false} position="bottom-left" />

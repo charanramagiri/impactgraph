@@ -1,6 +1,7 @@
 function ImpactAnalysisSkeleton() {
   return (
-    <div className="impact-results" aria-label="Analyzing service impact">
+    <div className="impact-results" aria-label="Analyzing service impact" role="status">
+      <span className="visually-hidden">Analyzing service impact</span>
       <div className="impact-summary-grid">
         {Array.from({ length: 3 }, (_, index) => (
           <div className="card impact-metric impact-metric-skeleton" key={index}>

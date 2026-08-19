@@ -36,7 +36,8 @@ function ServiceDetailsPanel({ selectedService, state, onRetry }) {
 
   if (state.loading) {
     return (
-      <aside className="card details-panel details-skeleton" aria-label="Loading service details">
+      <aside className="card details-panel details-skeleton" aria-label="Loading service details" role="status">
+        <span className="visually-hidden">Loading service details</span>
         <span className="skeleton skeleton-title" />
         <span className="skeleton skeleton-subtitle" />
         {Array.from({ length: 5 }, (_, index) => (

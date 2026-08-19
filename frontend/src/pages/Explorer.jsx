@@ -56,6 +56,7 @@ function layoutGraph(graphNodes) {
     position: positions.get(node.id),
     data: node,
     draggable: false,
+    ariaLabel: `${node.type}: ${node.name}${node.type === 'Service' ? '. Press Enter to view details.' : ''}`,
   }));
 }
 
@@ -271,6 +272,15 @@ function Explorer() {
               onNodeClick={(event, node) => {
                 if (node.data.type === 'Service') selectService(node);
               }}
+              onNodeKeyDown={(event, node) => {
+                if (
+                  node.data.type === 'Service' &&
+                  (event.key === 'Enter' || event.key === ' ')
+                ) {
+                  event.preventDefault();
+                  selectService(node);
+                }
+              }}
               onPaneClick={() => setSelectedId(null)}
               fitView
               fitViewOptions={{ padding: 0.12 }}
@@ -278,7 +288,6 @@ function Explorer() {
               maxZoom={1.8}
               nodesConnectable={false}
               elementsSelectable
-              proOptions={{ hideAttribution: true }}
             >
               <Background color="#d5dbe3" gap={24} size={1} />
               <Controls showInteractive={false} position="bottom-left" />

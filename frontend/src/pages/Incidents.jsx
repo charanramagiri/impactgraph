@@ -63,7 +63,8 @@ function selectRepresentativePaths(paths, affected, limit = 6) {
 
 function IncidentDetailSkeleton() {
   return (
-    <div className="card incident-detail-skeleton" aria-label="Loading incident details">
+    <div className="card incident-detail-skeleton" aria-label="Loading incident details" role="status">
+      <span className="visually-hidden">Loading incident details</span>
       <span className="skeleton skeleton-title" />
       <span className="skeleton skeleton-subtitle" />
       <span className="skeleton incident-skeleton-block" />

@@ -17,7 +17,7 @@
   --color-warning: #b54708;
   --color-loading: #667085;
   --shadow-card: 0 1px 2px rgb(16 24 40 / 5%);
-  --content-width: 1200px;
+  --content-width: 1280px;
 }
 
 * {
@@ -52,7 +52,9 @@ button,
   border-radius: 0.5rem;
   background: var(--color-primary);
   color: #ffffff;
+  font-weight: 650;
   cursor: pointer;
+  transition: border-color 140ms ease, background-color 140ms ease, color 140ms ease;
 }
 
 button:hover,
@@ -64,11 +66,18 @@ input,
 select,
 textarea {
   width: 100%;
+  min-height: 2.75rem;
   padding: 0.625rem 0.75rem;
   border: 1px solid #cbd5e1;
   border-radius: 0.5rem;
   background: var(--color-surface);
   color: var(--color-text);
+  transition: border-color 140ms ease, box-shadow 140ms ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #98a2b3;
 }
 
 a {
@@ -132,6 +141,9 @@ a {
 }
 
 .nav-link {
+  display: inline-flex;
+  min-height: 2.5rem;
+  align-items: center;
   padding: 0.55rem 0.75rem;
   border-radius: 0.45rem;
   color: #475467;
@@ -191,7 +203,7 @@ a {
 
 .page-section {
   display: grid;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .page-heading {
@@ -227,23 +239,6 @@ h1 {
   border-radius: 0.75rem;
   background: var(--color-surface);
   box-shadow: var(--shadow-card);
-}
-
-.placeholder-card {
-  min-height: 14rem;
-  padding: 2rem;
-  color: var(--color-muted);
-  line-height: 1.6;
-}
-
-.placeholder-card p {
-  max-width: 38rem;
-}
-
-.placeholder-label {
-  margin-top: 0;
-  color: #344054;
-  font-weight: 700;
 }
 
 .dashboard-content {
@@ -836,7 +831,7 @@ h1 {
   position: absolute;
   z-index: 5;
   right: 0.75rem;
-  bottom: 0.75rem;
+  top: 0.75rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.55rem 0.8rem;
@@ -1133,6 +1128,7 @@ h1 {
     order: 3;
     overflow-x: auto;
     padding-bottom: 0.1rem;
+    scrollbar-width: thin;
   }
 
   .nav-link {
@@ -1186,9 +1182,15 @@ h1 {
     font-size: 0.75rem;
   }
 
-  .placeholder-card {
-    min-height: 11rem;
-    padding: 1.25rem;
+  .main-content {
+    padding: 1.5rem 0 3rem;
+  }
+
+  .primary-nav {
+    margin-right: -0.625rem;
+    margin-left: -0.625rem;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
   }
 
   .stats-grid {
@@ -1230,7 +1232,7 @@ h1 {
 
   .graph-legend {
     right: 0.5rem;
-    bottom: 0.5rem;
+    top: 0.5rem;
     max-width: calc(100% - 4.5rem);
   }
 }
