@@ -320,17 +320,20 @@ Production secrets belong in the hosting platforms' environment settings and mus
 
 ## Screenshots
 
-<!-- Add Dashboard screenshot here -->
+### Dashboard
+
 ![ImpactGraph Dashboard](docs/screenshots/dashboard.png)
 
-<!-- Add Architecture Explorer screenshot here -->
+### Architecture Explorer
+
 ![ImpactGraph Architecture Explorer](docs/screenshots/architecture-explorer.png)
 
+### Impact Analysis
 
-<!-- Add Impact Analysis screenshot here -->
 ![ImpactGraph Impact Analysis](docs/screenshots/impact-analysis.png)
 
-<!-- Add Incidents screenshot here -->
+### Incident Explorer
+
 ![ImpactGraph Incident Explorer](docs/screenshots/incidents.png)
 
 
